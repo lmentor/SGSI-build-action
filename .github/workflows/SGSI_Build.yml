@@ -20,12 +20,12 @@ jobs:
       - name: Check Configuration
         run: |
           function required () { if ! [[ "$1" ]]; then echo "$2 variable can't be null." && exit 1; fi }
-          required "${{ steps.config.outputs.rom_url }}" "ROM_URL config"
-          required "${{ steps.config.outputs.build_type }}" "BUILD_TYPE config"
-          required "${{ steps.config.outputs.os_type }}" "OS_TYPE config"
-          required "${{ steps.config.outputs.zip_name }}" "ZIP_NAME config"
-          required "${{ steps.config.outputs.version }}" "VERSION config"
-          required "${{ steps.config.outputs.repack_name }}" "REPACK_NAME config"
+          required "${{ steps.config.outputs.rom_url }}" "https://dl3.pling.com/api/files/download/j/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjE2NDA4MTc2MjEiLCJ1IjpudWxsLCJsdCI6ImRvd25sb2FkIiwicyI6ImJkZDU4MTBlNWM3Y2RjOWQ2OGNiZWIyNDc0Nzk0ZTE0NzFlZTUxOWFmMmJmNzBjMDVjMDZmMGY5NTBkNDczMGUwYjgwYWM4NjA4MGFjM2NhNmYxZGQ1MTQ5NmQ1NjE0ZTdmZGJkZTFjZDg5YTk1NWQ2OTViZjcyMTU1NzgxYmZiIiwidCI6MTY0MTAzMzE1NSwic3RmcCI6IjQ3Y2YwZjkxMTY3Y2Y2NDFlNmZjNDEzNDZmOWVmYjMzIiwic3RpcCI6IjM1Ljc1LjIzOC42NiJ9.AkbO6_tak4SV5e8r5bHcIHazwxFDzTTOWpjbAcZETH8/Nusantara_v4.0-1-12-RMX1971-Gapps-29122021-OFFICIAL-0253.zip"
+          required "${{ steps.config.outputs.build_type }}" "ab"
+          required "${{ steps.config.outputs.os_type }}" "12"
+          required "${{ steps.config.outputs.zip_name }}" "Nusantara_v4.0-1-12-RMX1971-Gapps-29122021-OFFICIAL-0253"
+          required "${{ steps.config.outputs.version }}" "12"
+          required "${{ steps.config.outputs.repack_name }}" "Nusantara_v4.0-1"
 
       - name: Cleanup workspace
         uses: rokibhasansagar/slimhub_actions@main
